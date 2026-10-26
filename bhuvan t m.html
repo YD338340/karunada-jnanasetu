@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karunada Jnanasetu | Exam Success Karnataka</title>
+
+    <meta name="description" content="Find Karnataka government job notifications, previous question papers, study materials and online mock tests in Kannada and English.">
+
+    <meta name="keywords" content="Karnataka government jobs, RRB NTPC, SSC GD, previous question papers, mock tests, study materials">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #172033;
+        }
+
+        header {
+            background: #123b65;
+            color: white;
+            padding: 28px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 7px 0;
+        }
+
+        nav {
+            background: #0b2948;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .hero h2 {
+            color: #123b65;
+        }
+
+        .search {
+            width: 90%;
+            max-width: 500px;
+            padding: 14px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #123b65;
+            margin: 25px 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #174f86;
+        }
+
+        .card a,
+        .card button {
+            display: inline-block;
+            background: #174f86;
+            color: white;
+            padding: 11px 16px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .card a:hover,
+        .card button:hover {
+            background: #0b2948;
+        }
+
+        footer {
+            margin-top: 35px;
+            background: #123b65;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                margin: 6px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Karunada Jnanasetu</h1>
+        <p><strong>Exam Success Karnataka</strong></p>
+        <p>Learn • Practice • Succeed</p>
+        <p>Government Jobs | Education | Exam Preparation</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#jobs">Latest Jobs</a>
+        <a href="#papers">Question Papers</a>
+        <a href="#materials">Study Materials</a>
+        <a href="#tests">Mock Tests</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Welcome to Karunada Jnanasetu!</h2>
+
+        <p>
+            Your destination for government jobs,
+            exam preparation and study materials.
+        </p>
+
+        <input
+            class="search"
+            id="searchBox"
+            type="search"
+            placeholder="Search jobs, exams and study materials..."
+            oninput="searchCards()"
+        >
+    </section>
+
+    <main class="container">
+
+        <h2 class="section-title">Explore Our Resources</h2>
+
+        <div class="cards" id="cards">
+
+            <section class="card" id="jobs">
+                <h3>💼 Latest Government Jobs</h3>
+
+                <p>
+                    Find government job notifications,
+                    eligibility details and official application links.
+                </p>
+
+                <a href="https://www.ncs.gov.in/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore Jobs
+                </a>
+            </section>
+
+            <section class="card" id="papers">
+                <h3>📄 Previous Question Papers</h3>
+
+                <p>
+                    Prepare for competitive exams using
+                    previous examination papers.
+                </p>
+
+                <a href="https://www.rrbcdg.gov.in/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    RRB Official Website
+                </a>
+            </section>
+
+            <section class="card" id="materials">
+                <h3>📚 Study Materials</h3>
+
+                <p>
+                    Find educational resources and
+                    study materials for your preparation.
+                </p>
+
+                <a href="https://ncert.nic.in/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explore Materials
+                </a>
+            </section>
+
+            <section class="card" id="tests">
+                <h3>📝 Online Mock Tests</h3>
+
+                <p>
+                    Practice questions and improve
+                    your competitive examination skills.
+                </p>
+
+                <button onclick="startTest()">
+                    Start Practice
+                </button>
+
+                <p id="testMessage"></p>
+            </section>
+
+        </div>
+
+        <p id="noResults"
+           style="display:none; text-align:center;">
+            No results found. Please try another keyword.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Karunada Jnanasetu</p>
+        <p>Exam Success Karnataka</p>
+        <p>Learn Today, Succeed Tomorrow!</p>
+    </footer>
+
+    <script>
+        function searchCards() {
+            const query = document
+                .getElementById("searchBox")
+                .value.toLowerCase().trim();
+
+            const cards = document.querySelectorAll(".card");
+            let found = 0;
+
+            cards.forEach(function(card) {
+                const matches = card.innerText
+                    .toLowerCase()
+                    .includes(query);
+
+                card.style.display = matches ? "" : "none";
+
+                if (matches) {
+                    found++;
+                }
+            });
+
+            document.getElementById("noResults").style.display =
+                found > 0 ? "none" : "block";
+        }
+
+        function startTest() {
+            document.getElementById("testMessage").textContent =
+                "Online mock tests will be added soon. Stay tuned!";
+        }
+    </script>
+
+</body>
+</html>
